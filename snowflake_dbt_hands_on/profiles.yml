@@ -1,0 +1,9 @@
+snowflake_dbt_hands_on:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      role: ACCOUNTADMIN
+      warehouse: COMPUTE_WH
+      database: DEMO
+      schema: DEMO_SCHEMA
