@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: demo # The name used to reference the source in dbt models (e.g., {{ source('jaffle_shop', 'orders') }})
+    database: demo     # Optional: The specific database name (defaults to target database if omitted)
+    schema: demo_schema    # The schema where the source tables are located
+
+    tables:
+      - name: bike
+        description: "Raw bike data"
+        # You can add tests directly here as well:
+        # tests:
+        #   - not_null:
+        #       column_name: order_id
+        #   - unique:
+        #       column_name: order_id
+
+      - name: weather
+        description: "Raw weather data."
+        
+        # columns:
+        #   - name: customer_id
+        #     description: "Primary key for customers."
+        #     tests:
+        #       - unique
+        #       - not_null
